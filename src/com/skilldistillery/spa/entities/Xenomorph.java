@@ -1,7 +1,8 @@
 package com.skilldistillery.spa.entities;
 
 public class Xenomorph extends Animal {
-	private String noise = "Sizzle";
+	
+	private String noise = "Sizzzzzle";
 	
 	
 	public Xenomorph() {}
