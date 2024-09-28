@@ -72,11 +72,9 @@ public class Hippo extends Animal {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Hippo [noise=");
+		builder.append(super.getName());
+		builder.append(" the Hippo: ");
 		builder.append(noise);
-		builder.append(", name=");
-		builder.append(super.toString());
-		builder.append("]");
 		return builder.toString();
 	}
 	

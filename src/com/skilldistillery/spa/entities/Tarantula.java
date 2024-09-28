@@ -72,9 +72,9 @@ public class Tarantula extends Animal {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Tarantula [noise=");
+		builder.append(super.getName());
+		builder.append(" the Tarantula: ");
 		builder.append(noise);
-		builder.append("]");
 		return builder.toString();
 	}
 	

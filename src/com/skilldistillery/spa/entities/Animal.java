@@ -51,11 +51,17 @@ public abstract class Animal {
 		this.name = name;
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public int hashCode() {
 		return Objects.hash(name);
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -68,6 +74,9 @@ public abstract class Animal {
 		return Objects.equals(name, other.name);
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();

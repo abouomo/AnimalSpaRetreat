@@ -43,8 +43,7 @@ public class Attendant {
 				System.out.println("The room #" + i + " is empty");
 			}
 		}
-		System.out.println(this.name + " is done for the day!");
-		
+		System.out.println(this.name + " is done for the day!");	
 	}
 	
 	/**

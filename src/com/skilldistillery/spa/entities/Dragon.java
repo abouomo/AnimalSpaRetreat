@@ -46,9 +46,9 @@ public class Dragon extends Animal {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Dragon [noise=");
+		builder.append(super.getName());
+		builder.append(" the Dragon: ");
 		builder.append(noise);
-		builder.append("]");
 		return builder.toString();
 	}
 

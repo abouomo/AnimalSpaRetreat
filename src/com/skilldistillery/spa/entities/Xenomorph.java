@@ -45,9 +45,9 @@ public class Xenomorph extends Animal {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Xenomorph [noise=");
+		builder.append(super.getName());
+		builder.append(" the Xenomorph: ");
 		builder.append(noise);
-		builder.append("]");
 		return builder.toString();
 	}
 
