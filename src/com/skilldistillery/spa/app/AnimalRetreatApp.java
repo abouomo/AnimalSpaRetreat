@@ -58,7 +58,7 @@ public class AnimalRetreatApp {
 	 * Constructs a Dragon and set name. 
 	 */
 	public void addADragon() {
-		System.out.println("You select a for Dragon"); // FIX ME
+		System.out.println("You want to add a Dragon");
 		Animal animalType = new Dragon();
 		System.out.println("Next, what is their name?");
 		String name = scanner.next();
@@ -70,7 +70,7 @@ public class AnimalRetreatApp {
 	 * Constructs a Hippo and set name. 
 	 */
 	public void addAHippo() {
-		System.out.println("You select b for Hippo"); // FIX ME
+		System.out.println("You want to add a Hippo");
 		Animal animalType = new Hippo();
 		System.out.println("Next, what is their name?");
 		String name = scanner.next();
@@ -82,7 +82,7 @@ public class AnimalRetreatApp {
 	 * Constructs a Tarantula and set name. 
 	 */
 	public void addATarantula() {
-		System.out.println("You select c for Tarantula"); // FIX ME
+		System.out.println("You want to add a Tarantula"); 
 		Animal animalType = new Tarantula();
 		System.out.println("Next, what is their name?");
 		String name = scanner.next();
@@ -94,7 +94,7 @@ public class AnimalRetreatApp {
 	 * Constructs a Xenomorph and set name. 
 	 */
 	public void addAXenomorph() {
-		System.out.println("You select d for Xenomorph"); // FIX ME
+		System.out.println("You want to add a Xenomorph");
 		Animal animalType = new Xenomorph();
 		System.out.println("Next, what is their name?");
 		String name = scanner.next();
