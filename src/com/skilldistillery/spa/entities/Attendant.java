@@ -16,8 +16,6 @@ public class Attendant {
 		this.name = name;
 	}
 	
-	
-	
 	/**
 	 * A getter for the field name.
 	 * @return the name of the attendant
@@ -25,7 +23,6 @@ public class Attendant {
 	public String getName() {
 		return name;
 	}
-
 
 	/**
 	 * Iterates over the passed in Animal array, allowing the attendant to 
@@ -38,7 +35,8 @@ public class Attendant {
 		
 		for (int i = 0; i < animals.length; i++) {
 			if (animals[i] != null) {
-				System.out.println("I will feed " + animals[i].getName());
+				System.out.println("Room #" + i + " : I will feed " 
+						+ animals[i].getName());
 			} else {
 				System.out.println("The room #" + i + " is empty");
 			}
