@@ -55,60 +55,12 @@ public class AnimalRetreatApp {
 	}
 	
 	/**
-	 * Constructs a Dragon and set name. 
-	 */
-	public void addADragon() {
-		System.out.println("You want to add a Dragon");
-		Animal animalType = new Dragon();
-		System.out.println("Next, what is their name?");
-		String name = scanner.next();
-		animalType.setName(name);
-		retreat.addAnimal(animalType);
-	}
-	
-	/**
-	 * Constructs a Hippo and set name. 
-	 */
-	public void addAHippo() {
-		System.out.println("You want to add a Hippo");
-		Animal animalType = new Hippo();
-		System.out.println("Next, what is their name?");
-		String name = scanner.next();
-		animalType.setName(name);
-		retreat.addAnimal(animalType);
-	}
-	
-	/**
-	 * Constructs a Tarantula and set name. 
-	 */
-	public void addATarantula() {
-		System.out.println("You want to add a Tarantula"); 
-		Animal animalType = new Tarantula();
-		System.out.println("Next, what is their name?");
-		String name = scanner.next();
-		animalType.setName(name);
-		retreat.addAnimal(animalType);
-	}
-	
-	/**
-	 * Constructs a Xenomorph and set name. 
-	 */
-	public void addAXenomorph() {
-		System.out.println("You want to add a Xenomorph");
-		Animal animalType = new Xenomorph();
-		System.out.println("Next, what is their name?");
-		String name = scanner.next();
-		animalType.setName(name);
-		retreat.addAnimal(animalType);
-	}
-	
-	/**
 	 * Prompt the user to choose which sub-type of Animal. When the user 
-	 * chooses the type, construct that type of animal and add it to 
-	 * the sanctuary.
+	 * chooses the type, construct that type of animal.
 	 */
-	public void addAnimalMenu() {
-				
+	public Animal createAnimalBasedOnUserInput() {
+		Animal theAnimal = null;
+		// ask which kind of animal
 		System.out.println("You've chosen to add a new animal. What kind of "
 				+ "animal do you want to add? (a-d)");
 		System.out.println("a. Dragon\n"
@@ -116,15 +68,45 @@ public class AnimalRetreatApp {
 				+ "c. Tarantula\n"
 				+ "d. Xenomorph");
 		char animalOption = scanner.next().charAt(0);
-		if (animalOption == 'a' || animalOption == 'A') {
-			addADragon();
-		} else if (animalOption == 'b' || animalOption == 'B') {
-			addAHippo();
-		} else if (animalOption == 'c' || animalOption == 'C') {
-			addATarantula();
-		} else if (animalOption == 'd' || animalOption == 'D') {
-			addAXenomorph();
+		// create that specific animal
+		switch(animalOption) {
+		case 'a':
+		case 'A':
+			theAnimal = new Dragon();
+			break;
+		case 'b':
+		case 'B':
+			theAnimal = new Hippo();
+			break;
+		case 'c':
+		case 'C':
+			theAnimal = new Tarantula();
+			break;
+		case 'd':
+		case 'D':
+			theAnimal = new Xenomorph();
+			break;
+		default:
+			System.out.println("We only handle four types of animal");
+			System.out.println("a. Dragon\n"
+					+ "b. Hippo\n"
+					+ "c. Tarantula\n"
+					+ "d. Xenomorph");
 		}
+		
+		System.out.println("Next, what is their name?");
+		String name = scanner.next();
+		theAnimal.setName(name);
+		
+		return theAnimal;
+	}
+	
+	/**
+	 * Add an animal to the sanctuary.
+	 * @param theSpa The sanctuary
+	 */
+	public void addAnimal(AnimalRetreat theSpa) {
+		theSpa.addAnimal(createAnimalBasedOnUserInput());
 	}
 	
 	/**
@@ -154,7 +136,7 @@ public class AnimalRetreatApp {
 			if (option == 1) {
 				retreat.listAnimals();
 			} else if (option == 2) { 
-				addAnimalMenu();
+				addAnimal(retreat);
 			} else if (option == 3) {
 				retreat.startAttendantRounds();
 			} else if (option == 4) {
